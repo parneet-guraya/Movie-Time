@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">Movie Time</string>
+
+    <string-array name="movie_poster_images">
+        <item>https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UY256_CR4,0,172,256_AL_.jpg</item>
+        <item>https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg</item>
+        <item>https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg</item>
+        <item>https://images.justwatch.com/poster/178094886/s718/12-angry-men.%7Bformat%7D</item>
+        <item>https://m.media-amazon.com/images/I/81+H4lZVw+L._SL1500_.jpg</item>
+        <item>https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg</item>
+        <item>https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg</item>
+        <item>https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg</item>
+        <item>https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg</item>
+        <item>Seven Samurai</item>
+    </string-array>
+
+    <string-array name="movie_names">
+        <item>The GodFather</item>
+        <item>The Shawshank Redemption </item>
+        <item>The Dark Knight</item>
+        <item>12 Angry Men</item>
+        <item>Schindler\'s List</item>
+        <item>The Lord of the Rings: The Return of the King</item>
+        <item>Inception</item>
+        <item>Star Wars: Episode V - The Empire Strikes Back</item>
+        <item>The Matrix</item>
+        <item>Seven Samurai</item>
+    </string-array>
+
 </resources>
