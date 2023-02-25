@@ -9,15 +9,15 @@ import java.util.List;
 
 public class DataSource {
     private final List<Movie> list = new LinkedList<>();
-    private Context applicationContext;
-    private final String[] movieNamesArr = applicationContext.getResources().getStringArray(R.array.movie_names);
-    private final String[] mPosterUrl = applicationContext.getResources().getStringArray(R.array.movie_poster_images);
+    private final Context applicationContext;
 
     public DataSource(Context applicationContext) {
        this.applicationContext = applicationContext;
     }
 
     public DataSource loadListData() {
+        String[] movieNamesArr = applicationContext.getResources().getStringArray(R.array.movie_names);
+        String[] mPosterUrl = applicationContext.getResources().getStringArray(R.array.movie_poster_images);
         for (int i = 0; i < movieNamesArr.length; i++) {
             list.add(new Movie(movieNamesArr[i], mPosterUrl[i]));
         }
