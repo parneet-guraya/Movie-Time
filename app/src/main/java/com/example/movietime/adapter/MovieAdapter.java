@@ -11,18 +11,17 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.movietime.databinding.MovieListItemBinding;
-import com.example.movietime.glide.GlideImageLoader;
 import com.example.movietime.interactor.ImageLoadingLibrary;
 import com.example.movietime.model.Movie;
 
 import java.util.List;
 
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder> {
-    private List<Movie> movieList;
-    private Context context;
-    private ImageLoadingLibrary imageLoadingLibrary;
+    private final List<Movie> movieList;
+    private final Context context;
+    private final ImageLoadingLibrary imageLoadingLibrary;
 
-    public MovieAdapter(Context context, List<Movie> movieList,ImageLoadingLibrary imageLoadingLibrary) {
+    public MovieAdapter(Context context, List<Movie> movieList, ImageLoadingLibrary imageLoadingLibrary) {
         this.context = context;
         this.movieList = movieList;
         this.imageLoadingLibrary = imageLoadingLibrary;
@@ -32,7 +31,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder
         ImageView moviePosterIV;
         TextView movieNameTV;
 
-        public MyViewHolder(MovieListItemBinding listItemBinding){
+        public MyViewHolder(MovieListItemBinding listItemBinding) {
             super(listItemBinding.getRoot());
             moviePosterIV = listItemBinding.movieImage;
             movieNameTV = listItemBinding.movieName;
@@ -43,13 +42,13 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new MyViewHolder(MovieListItemBinding.inflate(LayoutInflater.from(context),parent,false));
+        return new MyViewHolder(MovieListItemBinding.inflate(LayoutInflater.from(context), parent, false));
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Movie mObj = movieList.get(position);
-        loadImage(mObj.getMPosterResId(),holder.moviePosterIV);
+        loadImage(mObj.getMPosterResId(), holder.moviePosterIV);
         holder.movieNameTV.setText(mObj.getMovieName());
     }
 
@@ -58,7 +57,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder
         return movieList.size();
     }
 
-    void loadImage(String imageUri,ImageView imageView){
-        imageLoadingLibrary.init().load(Uri.parse(imageUri),imageView);
+    void loadImage(String imageUri, ImageView imageView) {
+        imageLoadingLibrary.init().load(Uri.parse(imageUri), imageView);
     }
 }
